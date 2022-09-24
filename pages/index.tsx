@@ -1,6 +1,6 @@
 
-export const index = () => {
+export default function index() {
   return (
-    <div>Hellow World</div>
+    <div>Hello World</div>
   )
 }
