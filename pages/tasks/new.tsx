@@ -2,10 +2,13 @@
 import { Task } from "interfaces/Task";
 import { ChangeEvent, FormEvent, useState } from "react";
 import { Button, Card, Form, FormField, Icon } from "semantic-ui-react";
+import { useRouter } from "next/router";
 
 
 
 export default function NewPage() {
+
+    const router = useRouter();
 
     const [task, setTask] = useState({
         title: '',
@@ -35,6 +38,7 @@ export default function NewPage() {
 
         try {
             await createTask(task);
+            router.push('/');
         } catch (error) {
             console.log(error);
         }
