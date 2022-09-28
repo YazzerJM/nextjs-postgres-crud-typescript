@@ -3,6 +3,7 @@ import { Task } from "interfaces/Task";
 import { ChangeEvent, FormEvent, useState } from "react";
 import { Button, Card, Form, FormField, Icon } from "semantic-ui-react";
 import { useRouter } from "next/router";
+import { Layout } from "components/layout/Layout";
 
 
 
@@ -45,7 +46,7 @@ export default function NewPage() {
     }
 
   return (
-    <>
+    <Layout>
         <Card>
             <Card.Content>
                 <Form onSubmit={ handleSubmit }>
@@ -65,6 +66,6 @@ export default function NewPage() {
             </Card.Content>
         </Card>
     
-    </>
+    </Layout>
   )
 }
